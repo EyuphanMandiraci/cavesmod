@@ -4,6 +4,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import java.util.Random;
@@ -95,8 +96,9 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 0)) {
-					if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
-							.getBlock())) {
+					if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == CustomCaveAirBlock.block
+							.getDefaultState().getBlock()) == ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)))
+									.getBlock() == Blocks.BEDROCK.getDefaultState().getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -130,8 +132,10 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 1)) {
-					if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
-							.getBlock())) {
+					if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == CustomCaveAirBlock.block
+							.getDefaultState().getBlock())
+							|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK.getDefaultState()
+									.getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -174,8 +178,10 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 0)) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
-							.getBlock())) {
+					if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == CustomCaveAirBlock.block
+							.getDefaultState().getBlock())
+							|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == CustomCaveAirBlock.block
+									.getDefaultState().getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -209,8 +215,10 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 1)) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
-							.getBlock())) {
+					if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == CustomCaveAirBlock.block
+							.getDefaultState().getBlock())
+							|| ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK.getDefaultState()
+									.getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -253,8 +261,10 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 0)) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
-							.getBlock())) {
+					if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == CustomCaveAirBlock.block
+							.getDefaultState().getBlock())
+							|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK.getDefaultState()
+									.getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -288,8 +298,10 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 1)) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
-							.getBlock())) {
+					if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == CustomCaveAirBlock.block
+							.getDefaultState().getBlock())
+							|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK.getDefaultState()
+									.getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);

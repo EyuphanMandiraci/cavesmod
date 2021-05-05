@@ -119,8 +119,8 @@ public class CustomCaveAirBlock extends CavesmodModElements.ModElement {
 	public static class CustomBlock extends Block implements IWaterLoggable {
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
-					.setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0)
+					.slipperiness(0.1f).notSolid().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false));
 			setRegistryName("custom_cave_air");
 		}
