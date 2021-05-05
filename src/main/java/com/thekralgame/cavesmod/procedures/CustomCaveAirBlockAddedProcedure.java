@@ -72,7 +72,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if ((!(((world.getBlockState(new BlockPos((int) (x + 5), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
+		if ((((world.getBlockState(new BlockPos((int) (x + 5), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
 				&& (((world.getBlockState(new BlockPos((int) (x - 5), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
 						&& (((world.getBlockState(new BlockPos((int) x, (int) (y - 5), (int) z)))
 								.getMaterial() == net.minecraft.block.material.Material.ROCK)
@@ -81,7 +81,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 										&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 5))))
 												.getMaterial() == net.minecraft.block.material.Material.ROCK)
 												&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 5))))
-														.getMaterial() == net.minecraft.block.material.Material.ROCK)))))))) {
+														.getMaterial() == net.minecraft.block.material.Material.ROCK))))))) {
 			if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
