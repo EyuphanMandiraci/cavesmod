@@ -58,7 +58,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("xy", ((new Random()).nextInt((int) 1 + 1)));
+				_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 2 + 1)));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -86,7 +86,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "xy")) == 0)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "xyz")) == 0)) {
 				if (((new Object() {
 					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
@@ -102,7 +102,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("xy", ((new Random()).nextInt((int) 1 + 1)));
+								_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 1 + 1)));
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
@@ -137,7 +137,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("xy", ((new Random()).nextInt((int) 1 + 1)));
+								_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 1 + 1)));
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
@@ -165,7 +165,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "xy")) == 1)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "xyz")) == 1)) {
 				if (((new Object() {
 					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
@@ -181,7 +181,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("xy", ((new Random()).nextInt((int) 1 + 1)));
+								_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 1 + 1)));
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
@@ -216,7 +216,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
-								_tileEntity.getTileData().putDouble("xy", ((new Random()).nextInt((int) 1 + 1)));
+								_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 1 + 1)));
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
@@ -232,6 +232,78 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 					} else {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
+							BlockState _bs = CustomCaveAirBlock.block.getDefaultState();
+							world.setBlockState(_bp, _bs, 3);
+						}
+					}
+				}
+			} else if (true) {
+				if (((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 0)) {
+					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
+							.getBlock())) {
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 1 + 1)));
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putDouble("art_az", ((new Random()).nextInt((int) 1 + 1)));
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+					} else {
+						{
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
+							BlockState _bs = CustomCaveAirBlock.block.getDefaultState();
+							world.setBlockState(_bp, _bs, 3);
+						}
+					}
+				} else if (((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 1)) {
+					if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == CustomCaveAirBlock.block.getDefaultState()
+							.getBlock())) {
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putDouble("xyz", ((new Random()).nextInt((int) 1 + 1)));
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putDouble("art_az", ((new Random()).nextInt((int) 1 + 1)));
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+					} else {
+						{
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
 							BlockState _bs = CustomCaveAirBlock.block.getDefaultState();
 							world.setBlockState(_bp, _bs, 3);
 						}
