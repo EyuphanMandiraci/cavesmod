@@ -1,10 +1,31 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "CustomCaveAir",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "custom_cave_air"
+    },
+    {
+      "name": "Air",
+      "type": "tag",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "air"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.cavesmod.custom_cave_air": "Custom Cave Air"
+    }
   },
   "foldersRoot": {
     "name": "~",

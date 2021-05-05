@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cavesmod:blocks/custom_cave_air",
+    "particle": "cavesmod:blocks/custom_cave_air"
+  }
+}

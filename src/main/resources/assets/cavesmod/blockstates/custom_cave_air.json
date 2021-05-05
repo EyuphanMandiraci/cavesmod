@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cavesmod:block/custom_cave_air"
+    }
+  }
+}

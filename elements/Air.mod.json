@@ -1,0 +1,26 @@
+{
+  "_fv": 17,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:CustomCaveAir"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.VOID_AIR"
+      },
+      {
+        "value": "Blocks.CAVE_AIR"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "air",
+    "namespace": "forge"
+  }
+}
