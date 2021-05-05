@@ -97,8 +97,9 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 0)) {
 					if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == CustomCaveAirBlock.block
-							.getDefaultState().getBlock()) == ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)))
-									.getBlock() == Blocks.BEDROCK.getDefaultState().getBlock()))) {
+							.getDefaultState().getBlock())
+							|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK.getDefaultState()
+									.getBlock()))) {
 						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
