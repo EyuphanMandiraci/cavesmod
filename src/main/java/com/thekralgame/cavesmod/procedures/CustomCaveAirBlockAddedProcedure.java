@@ -72,7 +72,16 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if ((!((world instanceof World) ? ((World) world).isDaytime() : false))) {
+		if ((!(((world.getBlockState(new BlockPos((int) (x + 5), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
+				&& (((world.getBlockState(new BlockPos((int) (x - 5), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK)
+						&& (((world.getBlockState(new BlockPos((int) x, (int) (y - 5), (int) z)))
+								.getMaterial() == net.minecraft.block.material.Material.ROCK)
+								&& (((world.getBlockState(new BlockPos((int) x, (int) (y + 5), (int) z)))
+										.getMaterial() == net.minecraft.block.material.Material.ROCK)
+										&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 5))))
+												.getMaterial() == net.minecraft.block.material.Material.ROCK)
+												&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 5))))
+														.getMaterial() == net.minecraft.block.material.Material.ROCK)))))))) {
 			if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -182,7 +191,7 @@ public class CustomCaveAirBlockAddedProcedure extends CavesmodModElements.ModEle
 					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "art_az")) == 0)) {
 						if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == CustomCaveAirBlock.block
 								.getDefaultState().getBlock())
-								|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == CustomCaveAirBlock.block
+								|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK
 										.getDefaultState().getBlock()))) {
 							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
