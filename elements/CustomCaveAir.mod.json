@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "block",
   "definition": {
-    "texture": "custom_cave_air",
+    "texture": "cave_air_test",
     "textureTop": "custom_cave_air",
     "textureLeft": "custom_cave_air",
     "textureFront": "custom_cave_air",
