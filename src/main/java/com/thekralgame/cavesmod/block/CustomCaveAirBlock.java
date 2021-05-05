@@ -62,9 +62,12 @@ import net.minecraft.block.Block;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
+import com.thekralgame.cavesmod.procedures.CustomCaveAirBlockAddedProcedure;
 import com.thekralgame.cavesmod.CavesmodModElements;
 
 @CavesmodModElements.ModElement.Tag
@@ -149,6 +152,22 @@ public class CustomCaveAirBlock extends CavesmodModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(Blocks.AIR, (int) (1)));
+		}
+
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				CustomCaveAirBlockAddedProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
