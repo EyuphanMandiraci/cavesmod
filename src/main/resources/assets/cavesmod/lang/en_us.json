@@ -1,3 +1,5 @@
 {
-  "block.cavesmod.custom_cave_air": "Custom Cave Air"
+  "item.cavesmod.core_distance_spawn_egg": "Core Distance Spawn Egg",
+  "block.cavesmod.core_block": "Core Block",
+  "entity.cavesmod.core_distance": "Core Distance"
 }

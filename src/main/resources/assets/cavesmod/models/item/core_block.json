@@ -1,5 +1,5 @@
 {
-  "parent": "cavesmod:block/custom_cave_air",
+  "parent": "cavesmod:block/core_block",
   "display": {
     "thirdperson": {
       "rotation": [

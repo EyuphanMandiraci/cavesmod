@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cavesmod:block/core_block"
+    }
+  }
+}

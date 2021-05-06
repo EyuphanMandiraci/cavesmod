@@ -2,31 +2,31 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "CustomCaveAir",
+      "name": "CoreBlock",
       "type": "block",
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "custom_cave_air"
+      "registry_name": "core_block"
     },
     {
-      "name": "Air",
-      "type": "tag",
+      "name": "CoreDistance",
+      "type": "mob",
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "air"
+      "registry_name": "core_distance"
     },
     {
-      "name": "CustomCaveAirBlockAdded",
+      "name": "PlayerTick",
       "type": "procedure",
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "custom_cave_air_block_added",
+      "registry_name": "player_tick",
       "metadata": {
         "dependencies": [
           {
@@ -60,7 +60,9 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.cavesmod.custom_cave_air": "Custom Cave Air"
+      "item.cavesmod.core_distance_spawn_egg": "Core Distance Spawn Egg",
+      "block.cavesmod.core_block": "Core Block",
+      "entity.cavesmod.core_distance": "Core Distance"
     }
   },
   "foldersRoot": {
@@ -81,6 +83,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "com.thekralgame.cavesmod",
     "lockBaseModFiles": false
   },
